@@ -137,3 +137,10 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# VSCode settings
+.vscode/settings.json
+
+# temp & cache
+__temp/
+.DS_Store
