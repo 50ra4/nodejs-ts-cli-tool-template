@@ -1,0 +1,40 @@
+{
+  "name": "esbuild-nodejs-script",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "FIXME:",
+  "scripts": {
+    "build": "rm -rf dist && bash scripts/build-ts.sh",
+    "execute": "scripts/execute-ts.sh",
+    "execute:sample": "pnpm execute --build-target-src=src/__sample/index.ts",
+    "scan-osv": "osv-scanner --lockfile ./pnpm-lock.yaml",
+    "check-type": "tsc --noEmit",
+    "lint:lint-staged": "lint-staged",
+    "lint:prettier": "prettier --write 'src/**/*.{js,ts,tsx}'",
+    "lint:eslint": "eslint --fix 'src/**/*.{js,ts,tsx}'",
+    "lint": "pnpm lint:prettier && pnpm lint:eslint",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@types/node": "24.10.1",
+    "esbuild": "0.27.0",
+    "eslint": "9.39.1",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "16.5.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.7",
+    "pnpm": "10.24.0",
+    "prettier": "3.7.3",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.48.1"
+  },
+  "dependencies": {
+    "axios": "1.13.2",
+    "commander": "14.0.2",
+    "date-fns": "4.1.0",
+    "dotenv": "17.2.3"
+  }
+}
